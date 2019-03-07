@@ -18,9 +18,9 @@ ONNX provides two core components:
 - Extensible computational graph model. This model is represented as an acyclic graph, consisting of a list of nodes with edges. It also contains metadata information,
 such as author, version, etc.
 - Operators. These form the nodes in a graph. They are portable across the frameworks and are currently of three types.
- - Core Operators - These are supported by all ONNX-compatible products.
- - Experimental Operators - Either supported or deprecated within few months.
- - Custom Ops - which are specific to a framework or runtime.
+  - Core Operators - These are supported by all ONNX-compatible products.
+  - Experimental Operators - Either supported or deprecated within few months.
+  - Custom Ops - which are specific to a framework or runtime.
 
 > PySyft supports Python &gt;= 3.6 and PyTorch 1.0.0
 
