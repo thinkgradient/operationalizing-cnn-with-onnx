@@ -8,7 +8,7 @@ ONNX (Open Neural Network Exchange) is an open format that represents deep learn
 
 ONNX provides an intermediate representation (IR) of models (see below), whether a model is created using CNTK, TensorFlow or another framework. The IR representation allows deployment of ONNX models to various targets, such as IoT, Windows, Azure or iOS/Android.
 
-<img src="images/onnxgraph.png" alt="onnxgraph" width="200" height="130"/>
+<img src="images/onnxgraph.png" alt="onnxgraph" style="display: block; margin-left: auto; margin-right: auto; width: 50%;" width="600" height="600"/>
 
 The intermediate representation provides data scientist with the ability to choose the best framework and tool for the job at hand, without having to worry about how it will be deployed and optimized for the deployment target.
 
