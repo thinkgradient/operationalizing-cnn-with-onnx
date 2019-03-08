@@ -85,3 +85,8 @@ Postman is a desktop tool for API development and testing. It can be used to iss
 4. Then create a POST request and send an image of a number that you have a downloaded from the web. 
 
 <img src="images/classifydigit.png" alt="classifydigit" width="1068" height="327"/>
+
+## Contributors
+
+- Main contributor: Mufajjul Ali
+- Secondary contributor: Fatos Ismali
