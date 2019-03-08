@@ -65,7 +65,7 @@ python ModelTest.py
 
 This will generate a file called onnxmodel.onnx in the current directory which contains the trained weights and parameters of the CNN model.
 The ouptut of the above command should look like the following:
-<img src="images/trainresult.png" alt="trainresult" style="display: block; margin-left: auto; margin-right: auto; width: 50%;" width="1144" height="206"/>
+<img src="images/trainresult.png" alt="trainresult" width="1144" height="206"/>
 
 ### Run the Flask application
 
@@ -84,4 +84,4 @@ Postman is a desktop tool for API development and testing. It can be used to iss
 3. Enter a name for the Request, option description, create a collection and add the request to it and then Save the request.
 4. Then create a POST request and send an image of a number that you have a downloaded from the web. 
 
-<img src="images/classifydigit.png" alt="classifydigit" style="display: block; margin-left: auto; margin-right: auto; width: 50%;" width="1068" height="327"/>
+<img src="images/classifydigit.png" alt="classifydigit" width="1068" height="327"/>
