@@ -22,6 +22,34 @@ such as author, version, etc.
   - Experimental Operators - Either supported or deprecated within few months.
   - Custom Ops - which are specific to a framework or runtime.
 
+# Where ONNX?
+ONNX empathizes on reusability, and there are four ways of obtaining ONNX models
+- Public Repository – https://github.com/onnx/models
+- Custom Vision Services (https://azure.microsoft.com/en-gb/services/cognitiveservices/
+custom-vision-service/)
+- Convert to ONNX model (https://docs.microsoft.com/en-us/windows/ai/convertmodel-
+winmltools)
+- Create your own in DSVM or Azure Machine Learning Services
+
+For custom models and converters, please review the currently supported export and import model framework (https://github.com/onnx/tutorials)
+
+# Step by Step
+
+In this getting started guide, you will learn the followings:
+1. How to install ONNX on your Machine
+2. Creating a Deep Neural Network Model Using Keras
+3. Exporting the trained Model using ONNX
+4. Deploying ONNX in Python Flask using ONNX runtime as a Web Service
+
+# Install required libraries
+
+- pip install onnx
+- pip install onnxmltools
+- pip install winmltools
+- pip install Keras
+- pip install numpy==1.16
+- 
+
 > PySyft supports Python &gt;= 3.6 and PyTorch 1.0.0
 
 ```bash
