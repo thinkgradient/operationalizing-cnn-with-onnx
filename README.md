@@ -59,12 +59,12 @@ To run train the model and run the Flask application you first need to install a
 ```bash
 python ModelTest.py
 ```
-- Traing the model
- - This will generate a file called onnxmodel.onnx in the current directory which contains the trained weights and parameters of the CNN model.
+### Traing the model
+This will generate a file called onnxmodel.onnx in the current directory which contains the trained weights and parameters of the CNN model.
 The ouptut of the above command should look like the following:
 <img src="images/trainresult.png" alt="trainresult" style="display: block; margin-left: auto; margin-right: auto; width: 50%;" width="2287" height="412"/>
 
-2. Run the Flask application
+### Run the Flask application
 
 ```bash
 export FLASK_APP=mnistws.py
@@ -72,7 +72,7 @@ python -m flask run
 ```
 After running the commands above the flask application can be access at the following: http://127.0.0.1:5000/
 
-3. Use Postman to classify new number images
+### Use Postman to classify new number images
 
 Postman is a desktop tool for API development and testing. It can be used to issue HTTP requests like GET and POST. We will use Postman to send images of numbers to the Flask application using HTTP POST.
 
