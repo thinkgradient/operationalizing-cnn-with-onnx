@@ -73,7 +73,7 @@ The ouptut of the above command should look like the following:
 export FLASK_APP=mnistws.py
 python -m flask run
 ```
-After running the commands above the flask application can be access at the following: http://127.0.0.1:5000/
+After running the commands above the flask application can be accessed at the following address: http://127.0.0.1:5000/
 
 ### Use Postman to classify new number images
 
@@ -81,7 +81,7 @@ Postman is a desktop tool for API development and testing. It can be used to iss
 
 1. Download Postman https://www.getpostman.com/downloads/
 2. Open Postman and click on *Request(Create a basic request)*
-3. Enter a name for the Request, option description, create a collection and add the request to it and then Save the request.
+3. Enter a name for the Request, an optional description, create a collection and add the request to it and then Save the request.
 4. Then create a POST request and send an image of a number that you have a downloaded from the web. 
 
 <img src="images/classifydigit.png" alt="classifydigit" width="1068" height="327"/>
