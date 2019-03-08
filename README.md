@@ -41,57 +41,44 @@ In this getting started guide, you will learn the followings:
 3. Exporting the trained Model using ONNX
 4. Deploying ONNX in Python Flask using ONNX runtime as a Web Service
 
-# Install required libraries
+To run train the model and run the Flask application you first need to install a few Python libraries. Please use a *conda environment* if you don't want to interfere with any existing Python libraries such as numpy in your global conda environment. 
 
+# Install required libraries
+```bash
 - pip install onnx
 - pip install onnxmltools
 - pip install winmltools
 - pip install Keras
 - pip install numpy==1.16
-- 
+- pip install flask
+- pip install opencv_python
+```
 
-> PySyft supports Python &gt;= 3.6 and PyTorch 1.0.0
+# How to run the application
 
 ```bash
-pip install syft
+python ModelTest.py
 ```
-## Run Local Notebook Server
-All the examples can be played with by running the command
+- Traing the model
+ - This will generate a file called onnxmodel.onnx in the current directory which contains the trained weights and parameters of the CNN model.
+The ouptut of the above command should look like the following:
+<img src="images/trainresult.png" alt="trainresult" style="display: block; margin-left: auto; margin-right: auto; width: 50%;" width="2287" height="412"/>
+
+2. Run the Flask application
+
 ```bash
-make notebook
+export FLASK_APP=mnistws.py
+python -m flask run
 ```
-and selecting the pysyft kernel
+After running the commands above the flask application can be access at the following: http://127.0.0.1:5000/
 
-## Try out the Tutorials
+3. Use Postman to classify new number images
 
-A comprehensive list of tutorials can be found [here](https://github.com/OpenMined/PySyft/tree/master/examples/tutorials)
+Postman is a desktop tool for API development and testing. It can be used to issue HTTP requests like GET and POST. We will use Postman to send images of numbers to the Flask application using HTTP POST.
 
-These tutorials cover how to perform techniques such as federated learning and differential privacy using PySyft.
+1. Download Postman https://www.getpostman.com/downloads/
+2. Open Postman and click on *Request(Create a basic request)*
+3. Enter a name for the Request, option description, create a collection and add the request to it and then Save the request.
+4. Then create a POST request and send an image of a number that you have a downloaded from the web. 
 
-## Start Contributing
-
-The guide for contributors can be found [here](https://github.com/OpenMined/PySyft/tree/master/CONTRIBUTING.md). It covers all that you need to know to start contributing code to PySyft in an easy way.
-
-Also join the rapidly growing community of 2500+ on [Slack](http://slack.openmined.org). The slack community is very friendly and great about quickly answering questions about the use and development of PySyft!
-
-## Troubleshooting
-
-We have written an installation example in [this colab notebook](https://colab.research.google.com/drive/14tNU98OKPsP55Y3IgFtXPfd4frqbkrxK), you can use it as is to start working with PySyft on the colab cloud, or use this setup to fix your installation locally.
-
-## Organizational Contributions
-
-We are very grateful for contributions to PySyft from the following organizations!
-
- <img src="https://raw.githubusercontent.com/coMindOrg/federated-averaging-tutorials/master/images/comindorg_logo.png" alt="coMind" width="200" height="130"/>  
-
- [coMind Website](https://comind.org/) & [coMind Github](https://github.com/coMindOrg/federated-averaging-tutorials)
-
-## Disclaimer
-
-Do NOT use this code to protect data (private or otherwise) - at present it is very insecure.
-
-## License
-
-[Apache License 2.0](https://github.com/OpenMined/PySyft/blob/master/LICENSE)
-
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fmatthew-mcateer%2FPySyft.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fmatthew-mcateer%2FPySyft?ref=badge_large)
+<img src="images/classifydigit.png" alt="classifydigit" style="display: block; margin-left: auto; margin-right: auto; width: 50%;" width="2135" height="654"/>
